@@ -1,0 +1,120 @@
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+  background-color: #f0f0f0;
+}
+
+/* Job Listings - Updated for full width */
+.job-listings-container {
+  width: 100%;
+  margin: auto;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 15px;
+}
+
+/* Search Bar */
+.search-bar {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+/* Job Component Styles */
+.job {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  padding: 20px;
+  background-color: antiquewhite;
+  /* max-width: 700px; */
+}
+
+.job-title {
+  color: #333;
+  font-size: 1.6em;
+}
+
+.job-description,
+.job-tasks p,
+.job-requirements p,
+.job-benefits p {
+  color: #666;
+  line-height: 1.4;
+}
+
+.job-tasks,
+.job-requirements,
+.job-benefits {
+  margin-top: 20px;
+}
+
+.apply-now-button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 4px;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.apply-now-button:hover {
+  background-color: #0056b3;
+}
+/* Quiz Button */
+.quiz-button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+}
+
+.job-listings-container {
+  width: 70%;
+  margin: auto;
+  /* Additional styling */
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -30%; /* Start off-screen to the right */
+  width: 30%;
+  height: 100%;
+  background-color: #f4f4f4;
+  transition: right 0.3s; /* Smooth transition for sidebar */
+  padding: 10px; /* Padding for internal elements */
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1); /* Shadow for aesthetics */
+  overflow-y: auto; /* In case of scrolling */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Updated for better browser support */
+  padding-top: 20px;
+}
+
+.sidebar-visible {
+  right: 0; /* Bring the sidebar into view */
+}
+
+.job-listings-full-width-container {
+  width: 100%; /* Job listings take the full width when sidebar is hidden */
+  transition: width 0.3s; /* Optional transition for width adjustment */
+}
+
+/* When sidebar is visible, job listings adjust their width */
+.sidebar-visible + .job-listings-container {
+  width: 70%; /* Adjust width to take up the remaining space */
+}
+
+.toggle-sidebar-button {
+  position: fixed;
+  top: 10px; /* Adjust as needed */
+  right: 10px; /* Place near the sidebar */
+  z-index: 1000; /* Ensure it's above other elements */
+}
+/* ... Add other styles as needed ... */
